@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import "./Card.module.css";
+import styles from "./Card.module.css";
 
 function App() {
   const [news, setNews] = useState([]);
@@ -20,7 +20,7 @@ function App() {
       <div className="container my-3">
         <div className="row">
           <div className="col-4">
-            <button className="btn btn-primary" onClick={fetchNews}>
+            <button className={styles.button} onClick={fetchNews}>
               Fetch News
             </button>
           </div>
@@ -28,20 +28,22 @@ function App() {
       </div>
 
       <div className="container">
-        <div className="row">
+        <div className={styles.row}>
           {news.map((value, index) => {
             return (
-              <div key={index} className="col-4">
-                <div className="card" style={{ width: "400", height: "200" }}>
+              <div key={index} className={styles.column}>
+                <div className={styles.card}>
                   <img
                     src={value.urlToImage}
                     className="card-img-top"
                     alt="..."
                   />
                   <div className="card-body">
-                    <h5 className="card-title">{value.title}</h5>
-                    <p className="card-text">{value.description}</p>
-                    <a href={value.url} className="btn btn-primary">
+                    <h5 className="card-title">{value.title?.slice(0, 70)}</h5>
+                    <p className={styles.cardText}>
+                      {value.description?.slice(0, 100)}
+                    </p>
+                    <a href={value.url} className={styles.button}>
                       Read More
                     </a>
                   </div>

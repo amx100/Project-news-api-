@@ -44,7 +44,7 @@ function App() {
                       {value.description?.slice(0, 100)}
                     </p>
                     <a href={value.url} className={styles.button}>
-                      Read More
+                      Read More...
                     </a>
                   </div>
                 </div>

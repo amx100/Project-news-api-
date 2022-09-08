@@ -31,7 +31,7 @@ body {
     NotoColorEmoji, "Noto Color Emoji", "Segoe UI Symbol", "Android Emoji",
     EmojiSymbols, -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue",
     "Noto Sans", sans-serif;
-  font-size: 16px;
+  font-size: 13px;
   font-weight: 700;
   line-height: 24px;
   opacity: 1;
@@ -53,7 +53,6 @@ a {
 .column {
   width: 25%;
   padding: 0 10px;
-  display: inline-block;
   margin-bottom: 10px;
 }
 
@@ -61,10 +60,12 @@ a {
 /* .row {margin: 0 -5px;} */
 
 /* Clear floats after the columns */
-.row:after {
+.row {
   content: "";
   display: table;
   clear: both;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 /* Style the counter cards */
@@ -75,13 +76,14 @@ a {
   background-color: #f1f1f1;
   width: 300px;
   margin-bottom: 10px;
+  font-size: 14px;
 }
 
 /* Responsive columns - one column layout (vertical) on small screens */
 @media screen and (max-width: 600px) {
   .column {
     width: 100%;
-    display: block;
+
     margin-bottom: 20px;
   }
 }

@@ -1,13 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import News from "./Functional/Router/Landing Page/landingPage";
+
+import App1 from "./Functional/Movie/App1";
 import "./index.css";
 import reportWebVitals from "./reportWebVitals";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <News />
+    <App1 />
   </React.StrictMode>
 );
 

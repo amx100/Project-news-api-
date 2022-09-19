@@ -5,12 +5,14 @@ import styles from "./Card.module.css";
 function App() {
   const [news, setNews] = useState([]);
   const [page, setPage] = useState(1);
-  const [word, setWord] = useState();
+  const [search, setSearch] = useState("tesla");
+  const [value, setValue] = useState("");
+  const [category, setCategory] = useState("");
 
   const fetchNews = () => {
     axios
       .get(
-        `https://newsapi.org/v2/everything?q=tesla&&pageSize=20&page=${page}&sortBy=publishedAt&apiKey=29a06d6161374b318b0ca61b0d58b03f`
+        `https://newsapi.org/v2/everything?q=${search}&&pageSize=20&page=${page}&sortBy=publishedAt&apiKey=29a06d6161374b318b0ca61b0d58b03f`
       )
       .then((response) => {
         console.log(response);
@@ -19,10 +21,29 @@ function App() {
   };
   useEffect(() => {
     fetchNews();
-  }, [page]);
+  }, [page, search]);
 
   return (
     <>
+      <div>
+        <input
+          onChange={(e) => {
+            setValue(e.target.value);
+          }}
+          type="search"
+        />{" "}
+        <button
+          onClick={() => {
+            setSearch(value);
+            setNews([]);
+          }}
+        >
+          Search
+        </button>
+      </div>
+
+      <div className="filter"></div>
+
       <div className="container">
         <div className={styles.row}>
           {news.map((value, index) => {

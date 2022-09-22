@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styles from "./Card.module.css";
 import apiNews from "../Api/api";
+
 function App() {
   const [news, setNews] = useState([]);
   const [page, setPage] = useState(1);

@@ -53,9 +53,19 @@ a {
 }
 
 /* Responsive columns - one column layout (vertical) on small screens */
-@media screen and (max-width: 600px) {
-  .column {
+
+
+@media screen and (max-width: 550px) {
+  .search{
     width: 100%;
+
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .button2{
+    width: 50%;
 
     margin-bottom: 20px;
   }

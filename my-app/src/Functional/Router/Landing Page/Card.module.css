@@ -32,7 +32,7 @@ a {
 }
 
 .card {
-  background-color: #e7ac69;
+  background-color: #b9d6f2;
   border-radius: 3px;
   box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
   overflow: hidden;
@@ -70,12 +70,12 @@ a {
   background-color: #fff;
   border: 1px solid #d5d9d9;
   border-radius: 8px;
-  box-shadow: rgba(213, 217, 217, .5) 0 2px 5px 0;
+  box-shadow: rgba(213, 217, 217, 0.5) 0 2px 5px 0;
   box-sizing: border-box;
   color: #0f1111;
   cursor: pointer;
   display: inline-block;
-  font-family: "Amazon Ember",sans-serif;
+  font-family: "Amazon Ember", sans-serif;
   font-size: 13px;
   line-height: 29px;
   padding: 0 10px 0 11px;
@@ -87,7 +87,6 @@ a {
   touch-action: manipulation;
   vertical-align: middle;
   margin-bottom: 10px;
-
 }
 
 .button2:hover {
@@ -96,10 +95,9 @@ a {
 
 .button2:focus {
   border-color: #008296;
-  box-shadow: rgba(213, 217, 217, .5) 0 2px 5px 0;
+  box-shadow: rgba(213, 217, 217, 0.5) 0 2px 5px 0;
   outline: 0;
-} 
-
+}
 
 .button1 {
   display: flex;
@@ -108,12 +106,12 @@ a {
   background-color: #fff;
   border: 1px solid #d5d9d9;
   border-radius: 8px;
-  box-shadow: rgba(213, 217, 217, .5) 0 2px 5px 0;
+  box-shadow: rgba(213, 217, 217, 0.5) 0 2px 5px 0;
   box-sizing: border-box;
   color: #0f1111;
   cursor: pointer;
   display: inline-block;
-  font-family: "Amazon Ember",sans-serif;
+  font-family: "Amazon Ember", sans-serif;
   font-size: 13px;
   line-height: 29px;
   padding: 0 10px 0 11px;
@@ -133,36 +131,8 @@ a {
 
 .button1:focus {
   border-color: #008296;
-  box-shadow: rgba(213, 217, 217, .5) 0 2px 5px 0;
+  box-shadow: rgba(213, 217, 217, 0.5) 0 2px 5px 0;
   outline: 0;
-} 
-
-/* CATEGORY */
-
-.buttonCategory {
-  color: #ee6986;
-  cursor: pointer;
-}
-.buttonCategory:hover {
-  color: white;
-}
-.categories {
-  display: block;
-  position: absolute;
-  top: 10px;
-  right: 2%;
-  background-color: black;
-  color: #ee6986;
-  border: 1px solid #19302a;
-}
-.categoriesText {
-  color: #ee6986;
-  padding: 10px 40px;
-}
-.categoriesText:hover {
-  color: black;
-  background-color: white;
-  cursor: pointer;
 }
 
 /* Search input styled */
@@ -170,17 +140,19 @@ a {
 header {
   display: flex;
   justify-content: flex-end;
-  background-color: #ffa286;
+  background-color: #003559;
   padding: 1rem;
+  
 }
 .search {
   background-color: transparent;
-  border: 2px solid #5c0000;
+  border: 2px solid white;
   border-radius: 50px;
   font-family: inherit;
   font-size: 1.2rem;
   padding: 0.5rem 1.5rem;
   color: white;
+  box-shadow: 2px 1.7px 9px white;
 }
 .search:focus {
   outline: none;
@@ -190,10 +162,85 @@ header {
   color: white;
 }
 /* #===========================================================# */
-/* categories */
-dropdown {
-  display: flex;
+
+/* CATEGORY */
+
+.buttonCategory {
+  color: #ee6986;
+  cursor: pointer;
+}
+
+.buttonCategory:hover {
+  color: white;
+}
+
+.categories {
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+  top: 10px;
+  background-color: black;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  background-color: #034078;
+  color: white;
+  border-radius: 0 0 5px 5px;
+  border: 1px solid black;
+  width: 200px;
+}
+
+.fiximg {
+  margin: auto;
+  margin-bottom: 10px;
+  height: 200px;
+  width: auto;
+  text-align: center;
   align-items: center;
+  display: flex;
+}
+
+.sortit {
+  display: flex;
+  justify-content: center;
+  border: 1px transparent;
+  padding: 20px 15px;
+  border-radius: 10px 10px 10px 10px;
+  background-clip: padding-box;
+  background-color: #034078;
+  border-radius: 0.25rem;
+
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  font-family: system-ui, -apple-system, system-ui, "Helvetica Neue", Helvetica,
+    Arial, sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.25;
+  padding: calc(0.875rem - 1px) calc(1.5rem - 1px);
+  text-decoration: none;
+}
+
+.sort {
+  display: flex;
+  justify-content: center;
+}
+
+.categoriesText {
+  color: white;
+  padding: 10px 40px;
+}
+
+.categoriesText:hover {
+  color: black;
+  background-color: white;
+  cursor: pointer;
+}
+
+dropdown {
+  margin: auto;
+  width: 50%;
+  padding: 10px;
   border: 2px solid black;
   border-radius: 5px;
   background-color: royalblue;
@@ -202,21 +249,6 @@ dropdown {
   margin: 0 1%;
 }
 /*  */
-.categories {
-  display: block;
-  position: absolute;
-  top: 20%;
-  right: 28%;
-  background-color: #f9f9f9;
-  min-width: 9.5%;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  padding: 1% 1%;
-  z-index: 1;
-  background-color: royalblue;
-  color: white;
-  border-radius: 0 0 5px 5px;
-  border: 1px solid black;
-}
 
 .categoriesText {
   border-bottom: 2px solid black;

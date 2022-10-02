@@ -1,0 +1,28 @@
+.container {
+    background-color: #E2E2E2;
+  border: 1px solid white;
+  margin-top: 10%;
+}
+
+.title {
+  text-align: center;
+}
+
+.desc {
+  text-align: center;
+}
+
+.date {
+  text-align: center;
+}
+
+.author{
+    text-align: center;
+}
+
+.img {
+    width: 500px;
+    height: 300px;
+  display: block;
+  margin: 0 auto;
+}
